@@ -1,0 +1,77 @@
+{
+  "expo": {
+    "name": "Cellar Sessions",
+    "slug": "cellar-sessions",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#8B2635"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.cellarsessions.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app uses the camera to scan wine labels for automatic wine information entry.",
+        "NSMicrophoneUsageDescription": "This app uses the microphone to record voice notes for your wine tastings.",
+        "NSLocationWhenInUseUsageDescription": "This app uses location to suggest nearby wine shops and restaurants."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#8B2635"
+      },
+      "package": "com.cellarsessions.app",
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Cellar Sessions to access your camera to scan wine labels."
+        }
+      ],
+      [
+        "expo-av",
+        {
+          "microphonePermission": "Allow Cellar Sessions to access your microphone to record voice notes."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow Cellar Sessions to use your location to find nearby wine venues."
+        }
+      ]
+    ],
+    "scheme": "cellar-sessions",
+    "extra": {
+      "eas": {
+        "projectId": "5579fb70-4f2d-4138-b813-070197b9056f"
+      }
+    },
+    "owner": "helloemzy"
+  }
+}
